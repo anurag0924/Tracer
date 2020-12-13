@@ -75,7 +75,7 @@ class MainFragment : Fragment() {
                   val device = intent.getParcelableExtra<BluetoothDevice>(BluetoothDevice.EXTRA_DEVICE)
                   if(device.name != null)
                   list.add(device.name)
-                  contact_list.adapter = ScannerAdapter(list)
+                  contact_list.adapter = ScannerAdapter(list.distinct())
               }
         }
     }
